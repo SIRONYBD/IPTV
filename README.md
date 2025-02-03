@@ -1,15 +1,18 @@
-# IPTV
+# IPTV Checker Tool
 
-How It Works
-Option 1: Check IPTV Availability
-Checks each channel from the provided M3U source and reports the working versus non-working channels. Only working channels are saved to the output file.
+A tool to check IPTV availability, combine M3U files, and categorize channels based on time latency or alphabetical order.
 
-Option 2: Combine Multiple M3U Files
-Combines channels from multiple sources and removes duplicates (based on the stream URL).
+## Features
+- **Check IPTV Availability**: Check the availability of channels from an M3U source (URL or file).
+- **Combine M3U Files**: Combine multiple M3U files and remove duplicate channels based on stream URLs.
+- **Categorize Channels**:
+  - By **Time Latency**: Sort channels by the time latency of the stream.
+  - By **A-Z Order**: Sort channels alphabetically.
 
-Option 3: Categorize Channels (Delete Unavailable Channels)
+## Requirements
+- Python 3.x
+- Requests library
 
-By Time Latency:
-Measures the latency of each channel and includes only the channels that respond. The available channels are sorted from fastest to slowest before saving.
-Alphabetical Order (A-Z):
-Checks each channel for availability and includes only those that work. The available channels are then sorted alphabetically by the channel name (extracted from the info line) before saving.
+You can install the necessary dependencies using pip:
+```bash
+pip install requests
